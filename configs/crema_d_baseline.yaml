@@ -1,0 +1,21 @@
+
+data:
+  root: "/ABS/PATH/TO/AudioWAV"
+  max_len: 300
+  batch_size: 32
+model:
+  nhead: 8
+  dim_feedforward: 256
+  num_layers: 6
+  dropout: 0.3
+optim:
+  lr: 0.001
+  weight_decay: 0.01
+  scheduler:
+    T_0: 1000
+    T_mult: 10
+    eta_min: 1e-8
+train:
+  epochs: 10
+  seed: 42
+  num_workers: 4
